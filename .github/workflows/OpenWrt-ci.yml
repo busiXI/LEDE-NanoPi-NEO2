@@ -50,6 +50,7 @@ jobs:
           cat ./feeds.conf.default
 
       - name: Generate configuration file
+        run: |
           rm -f ./.config*
           touch ./.config
           #
