@@ -13,6 +13,8 @@ on:
   push:
     paths:
       - 'OpenWrt-ci.md'
+    branches: 
+      - master
 
 permissions:
   contents: read
@@ -46,18 +48,18 @@ jobs:
         uses: coolsnowwolf/lede@master
         #actions/checkout@v3
 
-      - name: Clone source code
-        working-directory: /workdir
-        run: |
-          git clone https://github.com/coolsnowwolf/lede
+      #- name: Clone source code
+      #  working-directory: /workdir
+      #  run: |
+      #    git clone https://github.com/coolsnowwolf/lede
 
-      - name: Update feeds
-        run: |
-          cd lede
-          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
-          ./scripts/feeds update -a
-          ./scripts/feeds install -a
-          cat ./feeds.conf.default
+      #- name: Update feeds
+      #  run: |
+      #    cd lede
+      #    sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+      #    ./scripts/feeds update -a
+      #    ./scripts/feeds install -a
+      #    cat ./feeds.conf.default
 
       - name: Generate configuration file
         run: |
