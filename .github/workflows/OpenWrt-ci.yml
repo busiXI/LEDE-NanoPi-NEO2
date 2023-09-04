@@ -47,6 +47,7 @@ jobs:
         #actions/checkout@v3
 
       - name: Clone source code
+        working-directory: /workdir
         run: |
           git clone https://github.com/coolsnowwolf/lede
 
