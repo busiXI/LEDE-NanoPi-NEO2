@@ -48,7 +48,11 @@ jobs:
 
       - name: Update feeds
         run: |
-          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default && ./scripts/feeds update -a && ./scripts/feeds install -a && cat ./feeds.conf.default
+          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          cd lede
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+          cat ./feeds.conf.default
 
       - name: Generate configuration file
         run: |
