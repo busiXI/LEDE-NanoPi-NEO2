@@ -40,7 +40,8 @@ jobs:
           sudo -E timedatectl set-timezone "Asia/Shanghai"
 
       - name: Checkout OpenWrt
-        uses: actions/checkout@v3
+        uses: coolsnowwolf/lede@master
+        #actions/checkout@v3
 
       - name: Update feeds
         run: |
