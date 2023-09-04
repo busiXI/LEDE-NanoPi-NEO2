@@ -46,10 +46,14 @@ jobs:
         uses: coolsnowwolf/lede@master
         #actions/checkout@v3
 
+      - name: Clone source code
+        run: |
+          git clone https://github.com/coolsnowwolf/lede
+
       - name: Update feeds
         run: |
-          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           cd lede
+          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           cat ./feeds.conf.default
