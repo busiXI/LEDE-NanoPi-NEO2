@@ -1,11 +1,11 @@
 # LEDE-NanoPi-NEO2
 
-# Image Options
-#
+Image Options
+
 CONFIG_SUNXI_SD_BOOT_PARTSIZE=20
 CONFIG_TARGET_ROOTFS_PARTSIZE=15153
-# 设置满为15173M（16GB Flash）
-#128GB的存储卡无法写满，因为action空间不够
+设置满为15173M（16GB Flash）
+128GB的存储卡无法写满，因为action空间不够
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
 ![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
