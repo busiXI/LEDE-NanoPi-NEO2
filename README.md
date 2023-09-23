@@ -1,4 +1,4 @@
-# LEDE-NanoPi-NEO2
+# coolsnowwolf/lede@master-NanoPi_NEO2
 
 # flash备注
 
